@@ -1,4 +1,4 @@
-service: plantio-backend
+service: default
 runtime: nodejs8
 network:
   instance_tag: appengine
