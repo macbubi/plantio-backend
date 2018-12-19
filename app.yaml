@@ -1,5 +1,4 @@
 service: plantio-backend
-env: flex
 runtime: nodejs
 network:
   instance_tag: appengine
