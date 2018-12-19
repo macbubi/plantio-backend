@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- 8.12.0
+sudo: enabled
+install:
+- npm install
+script:
+- npm test
+deploy:
+  provider: gae
+  keyfile: plantio-297ae530f790.json
+  project: plantio
+before_install:
+- openssl aes-256-cbc -K $encrypted_1d5badc407da_key -iv $encrypted_1d5badc407da_iv
+  -in plantio-297ae530f790.json.enc -out plantio-297ae530f790.json -d
