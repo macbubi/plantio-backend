@@ -1,3 +1,4 @@
+const moment = require('moment');
 const router = require('express').Router();
 const controller = require('./controller');
 
@@ -6,6 +7,8 @@ router.post("/plant-data", plantData);
 module.exports = router;
 
 async function plantData(req, res, next) {
+  console.log("[" + new moment().format("DD.MM.YYYY HH:MM:SS") + "] incoming request:", req.body);
+  
   const {
     humidity,
     moisture,

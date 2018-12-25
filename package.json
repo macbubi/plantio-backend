@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/macbubi/plantio#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "moment": "^2.23.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
