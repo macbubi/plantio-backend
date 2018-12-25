@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
+    "monit": "nodemon index.js",
     "inspect": "node --inspect index.js",
     "deploy": "gcloud app deploy --project=plantio"
   },
@@ -21,5 +22,8 @@
   "homepage": "https://github.com/macbubi/plantio#readme",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
   }
 }
