@@ -1,4 +1,4 @@
-const server = require('./server');
+const server = require('./src/server');
 
 server.start().then(function(res) {
   console.log("Server Initialized Successfully!");
