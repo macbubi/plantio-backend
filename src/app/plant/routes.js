@@ -1,11 +1,30 @@
 const router = require('express').Router();
+const controller = require('./controller');
 
-router.get("/", get);
+router.get("/getData", getData);
 
 
 module.exports = router;
 
-function get(req, res, next) {
+async function getData(req, res, next) {
+  const {
+    startDate,
+    endDate,
+    plantId
+  } = req.body;
+  
+  // if (required parms not provided) {
+  //     return res.status(400).send('error message');
+  // }
+
+  try {
+      const data = await controller.getData(startDate, endDate, plantId);
+      return res.status(200).send(data);
+  }
+  catch (err) {
+      return res.status(500).send(err);
+  }
+  
   res.status(200).send({
     response: 'success',
     message: 'not yet configured'

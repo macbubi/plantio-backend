@@ -3,8 +3,9 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const router = express.Router();
 
+const APP_BASE_URL = "/app";
 var dataRoutes = require('./data/routes');
-var appRoutes = require('./app/routes');
+var plantRoutes = require('./app/plant/routes');
 
 const app = express();
 
@@ -22,7 +23,12 @@ app.use(router);
 // router.put( "*", auth, authz );
 
 router.use("/data", dataRoutes);
-router.use("/app", appRoutes);
+
+router.use(APP_BASE_URL + "/plant", plantRoutes);
+// router.use(APP_BASE_URL + "/plant", appRoutes);
+// ...
+// ...
+
 
 // health_check
 router.get('/health_check', function (req, res, next) {
