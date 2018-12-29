@@ -23,8 +23,10 @@ app.use(router);
 
 router.use("/data", dataRoutes);
 router.use("/app", appRoutes);
+
+// health_check
 router.get('/health_check', function (req, res, next) {
-  res.status(200).send('ok');
+  res.status(200).send('process.enc.DB_CRED: '+process.enc.DB_CRED);
 });
 
 module.exports = {
