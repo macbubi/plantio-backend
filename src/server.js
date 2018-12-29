@@ -23,6 +23,9 @@ app.use(router);
 
 router.use("/data", dataRoutes);
 router.use("/app", appRoutes);
+router.get('/health_check', function (req, res, next) {
+  res.status(200).send('ok');
+});
 
 module.exports = {
     start
