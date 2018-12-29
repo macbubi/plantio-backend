@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
+var config = require('../config/config');
 
-const MONGO_URI = "mongodb://localhost/";
-const DB_NAME = "plantio";
-const DB_URI = MONGO_URI + DB_NAME;
+const DB_URI = config.mongodbURI;
 
 function start() {
   return new Promise(function (resolve, reject) {
