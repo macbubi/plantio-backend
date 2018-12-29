@@ -17,4 +17,9 @@ gem install travis -v 1.8.9 --no-rdoc --no-ri
 * [Heroku Staging](https://dashboard.heroku.com/apps/plantio-staging)
 * [Heroku Production](https://dashboard.heroku.com/apps/plantio-production)
 
+#### See Logs
+```
+heroku logs --tail -a=plantio-staging
+```
+
 ### Database [mlab](https://mlab.com/home)
