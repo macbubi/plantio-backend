@@ -9,7 +9,7 @@ let commonConfig = {
 
 function checkSecureVars() {
   // if(!process.env.NODE_ENV) {
-    throw new Error('node-env='+process.env.NODE_ENV);
+    throw new Error('TEST='+process.env.TEST);
   // }
 }
 
