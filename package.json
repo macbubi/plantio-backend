@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "monit": "nodemon --inspect index.js",
+    "dev": "NODE_ENV=dev node index.js",
+    "staging": "NODE_ENV=staging node index.js",
+    "production": "NODE_ENV=production node index.js",
+    "monit": "NODE_ENV=dev nodemon --inspect index.js",
     "inspect": "node --inspect index.js",
     "deploy": "gcloud app deploy --project=plantio"
   },
