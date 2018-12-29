@@ -1,3 +1,3 @@
 module.exports = {
-  mongodbURI: "mongodb://localhost/plantio",
+  mongodbURI: "mongodb://plantio-backend:2pc3hVXKSmXDUBx@ds047865.mlab.com:47865/plantio-staging",
 }
