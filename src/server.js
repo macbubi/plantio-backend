@@ -1,7 +1,7 @@
 const http = require("http");
 const express = require("express");
 const bodyParser = require('body-parser');
-const router = require('express').Router();
+const router = express.Router();
 
 var dataRoutes = require('./data/routes');
 var appRoutes = require('./app/routes');
@@ -10,6 +10,7 @@ const app = express();
 
 app.use(bodyParser.json({limit:'1mb'}));
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(router);
 
 // TODO authentication
 // const auth = require( '../middlewares/security-strategies' ).growAuth;
@@ -19,7 +20,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 // router.get( "*", auth, authz );
 // router.delete( "*", auth, authz );
 // router.put( "*", auth, authz );
-debugger
 
 router.use("/data", dataRoutes);
 router.use("/app", appRoutes);
