@@ -34,21 +34,8 @@ module.exports = {
 };
 
 async function start() {
-    logEnvVars();
     const server = http.createServer(app);
     const port = process.env.PORT || 3000;
     console.log("listening on port: " + port);
     return await server.listen(port);
 };
-
-
-
-
-function logEnvVars() {
-  console.log("========== Environment Variables ======");
-  console.log('All Vars: ' + JSON.stringify(process.env));
-  console.log("NODE_ENV="+process.env.NODE_ENV);
-  console.log("DB_CRED="+process.env.DB_CRED);
-  console.log("TEST="+process.env.TEST);
-  console.log("========== End Environment Variables ======");
-}
