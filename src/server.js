@@ -46,6 +46,7 @@ async function start() {
 
 function logEnvVars() {
   console.log("========== Environment Variables ======");
+  console.log('All Vars: ' + process.env);
   console.log("NODE_ENV="+process.env.NODE_ENV);
   console.log("DB_CRED="+process.env.DB_CRED);
   console.log("TEST="+process.env.TEST);
