@@ -26,7 +26,7 @@ router.use("/app", appRoutes);
 
 // health_check
 router.get('/health_check', function (req, res, next) {
-  res.status(200).send('process.enc.DB_CRED: '+process.enc.DB_CRED);
+  res.status(200).send('ok');
 });
 
 module.exports = {
