@@ -3,13 +3,12 @@
 // const logger = require('../config/logger')(module.filename);
 
 const router = require('express').Router();
+const controller = require('./controller');
 
 router.post("/plant", plantData);
 // ...
 // post, get, put, delete
 // ...
-
-module.exports = router;
 
 async function plantData(req, res, next) {
   
@@ -32,3 +31,4 @@ async function plantData(req, res, next) {
       return res.status(500).send(err);
   }
 }
+module.exports = router;
