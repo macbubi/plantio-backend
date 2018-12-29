@@ -8,8 +8,8 @@ let commonConfig = {
 };
 
 function checkSecureVars() {
-  // if(!process.env.NODE_ENV) {
-    throw new Error('TEST='+process.env.TEST);
+  // if(!process.env.DB_CRED) {
+    // throw new Error('no DB_CRED provided');
   // }
 }
 
