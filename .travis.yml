@@ -4,8 +4,9 @@ node_js:
 sudo: enabled
 install:
 - npm install
-- npm run staging
 script: 'true'
+env:
+  - NODE_ENV=staging
 deploy:
   provider: heroku
   app:
