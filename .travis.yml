@@ -5,7 +5,7 @@ sudo: enabled
 install:
 - npm install
 script: 
-  - TEST=${TEST} DB_CRED=${DB_CRED} node index.js
+  - TEST=$TEST DB_CRED=$DB_CRED node index.js
 env:
   - NODE_ENV: staging
   - TEST: daniel
