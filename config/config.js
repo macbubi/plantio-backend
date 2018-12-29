@@ -8,9 +8,9 @@ let commonConfig = {
 };
 
 function checkSecureVars() {
-  if(!process.env.DB_CRED) {
-    throw new Error('no DB_CRED provided');
-  }
+  // if(!process.env.NODE_ENV) {
+    throw new Error('node-env='+process.env.NODE_ENV);
+  // }
 }
 
 function getConfig(env) {
