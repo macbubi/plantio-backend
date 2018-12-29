@@ -4,6 +4,7 @@ node_js:
 sudo: enabled
 install:
 - npm install
+- npm start
 script: 'true'
 env:
   matrix:
