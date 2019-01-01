@@ -19,6 +19,7 @@ async function getData(req, res, next) {
 
   try {
       const data = await controller.getData(startDate, endDate, plantId);
+      res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
       return res.status(200).send(data);
   }
   catch (err) {
